@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+	<h1>Insira informações do Aluno</h1>
+	<div class= "container">
+	<form th:action="@{/cadastrar-aluno}" method="post"
+		th:object="${alunoViewModel}">
+		<label>Nome</label> <input type="text" placeholder="Nome"
+			required="required" th:field="*{nome}"> <label>Sobrenome</label>
+		<input type="text" placeholder="Sobrenome" required="required"
+			th:field="*{sobrenome}"> <label>RA</label> <input
+			type="number" placeholder="Matricula" required="required"
+			th:field="*{matricula}"> <br> <br> <input
+			type="submit">
+	</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Aula01 - Spring</title>
+<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+</head>
+<body>
+	<div class= "container">
+	<h1>Hello World!</h1>
+	<h2 th:text=${turma}></h2>
+	<h2 th:text=${professor.nome}></h2>
+	<h2 th:text=${professor.sobrenome}></h2>
+
+	<br>
+	<br>
+
+	<ul th:each="aluno: ${alunos}">
+		<li><span th:text="${aluno.nome}"></span> <span
+			th:text="${aluno.sobrenome}"></span> <span
+			th:text="${aluno.matricula}"></span></li>
+	</ul>
+
+
+
+	<a href="/cadastrar-aluno">Cadastro Aluno</a>
+	<a href="/cadastrar-professor">Cadastro Professor</a>
+	</div>
+</body>
+</html>
